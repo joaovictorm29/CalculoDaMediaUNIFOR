@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Média Unifor</title>
+</head>
+<body>
+    <script>
+        var pulaLinha, mostra
+        pulaLinha = function(){
+            document.write("<br>");
+        };
+        mostra = function(frase){
+            document.write(frase);
+            pulaLinha();
+        };
+        var av1 = Number(prompt("Informe o valor da nota da AV1:"));
+        var av2 = Number(prompt("Informe o valor da nota da AV2:"));
+        var mp = (av1 + av2)/2;
+        mostra("Média parcial: " + mp);
+        if (mp >= 4){
+            alert("Parabéns, você segue na luta!");
+            var av3 = Number(prompt("Informe a nota da AV3:"));
+            var mf = (av3 + mp)/2;
+            mostra("Média final: " + mf);
+            if (av3 >= 4 && mf >= 5){
+                mostra("Parabéns, você foi aprovado!");
+            } else {
+                mostra("Infelizmente você não conseguiu. Mais sorte da próxima vez.");
+            }
+        } else {
+            mostra("Infelizmente você reprovou!");
+        }
+        </script>
+</body>
+</html>
